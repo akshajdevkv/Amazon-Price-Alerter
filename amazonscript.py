@@ -53,4 +53,4 @@ while True:
     with open('database.csv','w') as csv_file_1:
         csv_writer = csv.writer(csv_file_1)
         csv_writer.writerows(remaining_users)
-    time.sleep(20)
+    time.sleep(86400)
