@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Amazon Price Alerter</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='./util.css')}}">
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='./main.css')}}">
+	<link rel="shortcut icon" href="{{ url_for('static', filename='icons8-low-price-64.png') }}">
+<!--===============================================================================================-->
+</head>
+<body>
+
+
+	<div class="container-contact100">
+		<div class="contact100-map" id="google_map" data-map-x="40.722047" data-map-y="-73.986422" data-pin="images/icons/map-marker.png" data-scrollwhell="0" data-draggable="1"></div>
+
+		<div class="wrap-contact100">
+			<div class="contact100-form-title" style="background-image: url(./static/bg-01.jpg);">
+				<span class="contact100-form-title-1">
+					Amazon Price Alerter
+				</span>
+
+				<span class="contact100-form-title-2">
+					Amazon Price Alerter is a web application that emails you when the product that you wanted to buy reaches your desired price
+				</span>
+				<span class="contact100-form-title-3">
+					Warning : Only works if you are buying from amazon.in (India)
+				</span>
+			</div>
+
+			<form class="contact100-form validate-form" action="/submit_form" method="post">
+				<h2 class="contact100-form-title-4">
+					Thank you for using Amazon Price Alerter!
+				</h2>
+
+				<img class="email-image" src="./static/download.png" alt="send_mail">
+			
+			</form>
+		</div>
+	</div>
+
+
+
+	<div id="dropDownSelect1"></div>
+
+	<script src="{{ url_for('static',filename='./main.js')}}"></script>
+	<script>
+	  window.dataLayer = window.dataLayer || [];
+	  function gtag(){dataLayer.push(arguments);}
+	  gtag('js', new Date());
+
+	  gtag('config', 'UA-23581568-13');
+	</script>
+
+</body>
+</html>
