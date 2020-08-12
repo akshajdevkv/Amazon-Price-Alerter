@@ -40,17 +40,17 @@ while True:
                 product_price = ''.join(soup.find('div',{'id':'price'}).find_all('span')[2].text.strip()[2:].split(','))
                 if float(product_price) <= float(my_price):
                 	
-                	print(send_email(from_address='akshajvaranacode404@gmail.com',password='eoovlchuqwaaqail',to_address=email_address,result='positive',name=name,product_price=product_price,product_title=product_title,my_price=my_price,url=url))
+                	print(send_email(from_address='youremail@gmail.com',password='password',to_address=email_address,result='positive',name=name,product_price=product_price,product_title=product_title,my_price=my_price,url=url))
  
                  
                 else:
-                	print(send_email(from_address='akshajvaranacode404@gmail.com',password='eoovlchuqwaaqail',to_address=email_address,result='negative',name=name,product_price=product_price,product_title=product_title,my_price=my_price,url=url))
+                	print(send_email(from_address='youremail@gmail.com',password='password',to_address=email_address,result='negative',name=name,product_price=product_price,product_title=product_title,my_price=my_price,url=url))
                  
                 	remaining_users.append(user)
             except Exception as err:
                 print(err)
-                print(send_email(from_address='akshajvaranacode404@gmail.com',password='eoovlchuqwaaqail',to_address=email_address,result='negative',name=name,product_price=product_price,product_title=product_title,my_price=my_price,url=url))
+                print(send_email(from_address='youremail@gmail.com',password='password',to_address=email_address,result='negative',name=name,product_price=product_price,product_title=product_title,my_price=my_price,url=url))
     with open('database.csv','w') as csv_file_1:
         csv_writer = csv.writer(csv_file_1)
         csv_writer.writerows(remaining_users)
-    time.sleep(20)
+    time.sleep(86400)
